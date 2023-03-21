@@ -1,0 +1,38 @@
+<div class="background-image-container">
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="d-flex flex-wrap">
+        <div>
+          <h5 class="display-5">Rice University Digital Scholarship Archive</h5>
+<!--          <p class="lead">Rice University Digital Scholarship Archive</p>-->
+          <p class="font-weight-light">This is Rice's institutional repository, a web site where the university's
+            intellectual output is shared, managed, searched, and preserved. Most materials
+            come from Rice faculty members' research, electronic theses and dissertations,
+            and digitized collections of rare or unique books, images, musical performances,
+            and manuscripts. The archive runs on DSpace, an open source software package.
+          </p>
+
+          <ds-search-form [inPlaceSearch]="false" [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-search-form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <picture class="background-image">
+    <source type="image/webp" srcset="assets/rice/images/3owls.jpeg 2000w, assets/rice/images/3owls.jpeg 1200w, assets/rice/images/3owls.jpeg 768w">
+    <source type="image/jpg" srcset="assets/rice/images/3owls.jpeg 2000w, assets/rice/images/3owls.jpeg 1200w, assets/rice/images/3owls.jpeg 768w">
+    <img alt="" [src]="'assets/rice/images/3owls.jpeg'"/><!-- without the []="''" Firefox downloads both the fallback and the resolved image -->
+  </picture>
+<!--  <picture class="background-image">-->
+<!--    <source type="image/webp" srcset="assets/rice/images/Rice-bg.jpeg 2000w, assets/rice/images/Rice-bg.jpeg 1200w, assets/rice/images/Rice-bg.jpeg 768w">-->
+<!--    <source type="image/jpg" srcset="assets/rice/images/Rice-bg.jpeg 2000w, assets/rice/images/Rice-bg.jpeg 1200w, assets/rice/images/Rice-bg.jpeg 768w">-->
+<!--    <img alt="" [src]="'assets/rice/images/Rice-bg.jpeg'"/>&lt;!&ndash; without the []="''" Firefox downloads both the fallback and the resolved image &ndash;&gt;-->
+<!--  </picture>-->
+<!--  <picture class="background-image">-->
+<!--    <source type="image/webp" srcset="assets/rice/images/220px-RiceInstitute1913.png 2000w, assets/rice/images/220px-RiceInstitute1913.png 1200w, assets/rice/images/220px-RiceInstitute1913.png 768w">-->
+<!--    <source type="image/jpg" srcset="assets/rice/images/220px-RiceInstitute1913.png 2000w, assets/rice/images/220px-RiceInstitute1913.png 1200w, assets/rice/images/220px-RiceInstitute1913.png 768w">-->
+<!--    <img alt="" [src]="'assets/rice/images/220px-RiceInstitute1913.png'"/>&lt;!&ndash; without the []="''" Firefox downloads both the fallback and the resolved image &ndash;&gt;-->
+<!--  </picture>-->
+
+</div>
+

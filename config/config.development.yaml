@@ -50,7 +50,7 @@ auth:
   # Authentication REST settings
   rest:
     # If the rest token expires in less than this amount of time, it will be refreshed automatically.
-    # This is independent from the idle warning.
+    # This is independent of the idle warning.
     timeLeftBeforeTokenRefresh: 120000 # 2 minutes
 
 # Form settings
@@ -230,7 +230,7 @@ themes:
   # - name: 'custom',
   #   regex: 'collections\/e8043bc2.*'
   #
-  # # A theme with a uuid property will match the community, collection or item with the given
+  # # A theme with an uuid property will match the community, collection or item with the given
   # # ID, and all collections and/or items within it
   # - name: 'custom',
   #   uuid: '0958c910-2037-42a9-81c7-dca80e3892b4'
@@ -252,6 +252,27 @@ themes:
   # # This theme will use the default bootstrap styling for DSpace components
   # - name: BASE_THEME_NAME
   #
+#  - name: dspace
+#    headTags:
+#      - tagName: link
+#        attributes:
+#          rel: icon
+#          href: assets/dspace/images/favicons/favicon.ico
+#          sizes: any
+#      - tagName: link
+#        attributes:
+#          rel: icon
+#          href: assets/dspace/images/favicons/favicon.svg
+#          type: image/svg+xml
+#      - tagName: link
+#        attributes:
+#          rel: apple-touch-icon
+#          href: assets/dspace/images/favicons/apple-touch-icon.png
+#      - tagName: link
+#        attributes:
+#          rel: manifest
+#          href: assets/dspace/images/favicons/manifest.webmanifest
+#
   - name: rice
     headTags:
       - tagName: link
@@ -294,5 +315,5 @@ info:
 # Whether to enable Markdown (https://commonmark.org/) and MathJax (https://www.mathjax.org/)
 # display in supported metadata fields. By default, only dc.description.abstract is supported.
 markdown:
-  enabled: false
-  mathjax: false
+  enabled: true
+  mathjax: true
