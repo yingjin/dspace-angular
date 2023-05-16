@@ -19,7 +19,13 @@
       background-color: var(--ds-top-footer-bg);
       padding: var(--ds-footer-padding);
       margin: calc(var(--ds-footer-padding) * -1);
-      font-size: .7rem;
+      font-size: .9rem;
+      a {
+        color: var(--ds-breadcrumb-link-color);
+      }
+      a:hover {
+        color: var(--ds-breadcrumb-link-hover-color);
+      }
     }
 
     .bottom-footer {
@@ -29,7 +35,10 @@
 
           a {
             padding: 0 calc(var(--bs-spacer) / 2);
-            color: inherit
+            color: var(--ds-navbar-link-color);
+          }
+          a:hover {
+            color: var(--ds-navbar-link-hover-color);
           }
 
           &:not(:last-child) {
