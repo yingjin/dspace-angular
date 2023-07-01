@@ -257,7 +257,7 @@ themes:
       - tagName: link
         attributes:
           rel: icon
-          href: assets/rice/images/favicons/favicon-blueBG.ico
+          href: assets/rice/images/favicons/Rice-R.ico
           sizes: any
       - tagName: link
         attributes:
