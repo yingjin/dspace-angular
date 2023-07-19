@@ -59,6 +59,11 @@
                 "input": "src/themes/dspace/styles/theme.scss",
                 "inject": false,
                 "bundleName": "dspace-theme"
+              },
+              {
+                "input": "src/themes/rice/styles/theme.scss",
+                "inject": false,
+                "bundleName": "rice-theme"
               }
             ],
             "scripts": [],
@@ -266,26 +271,16 @@
           "options": {
             "lintFilePatterns": [
               "src/**/*.ts",
-              "src/**/*.html",
-              "src/**/*.json5"
+              "src/**/*.html"
             ]
           }
         }
       }
     }
   },
+  "defaultProject": "dspace-angular",
   "cli": {
     "analytics": false,
-    "schematicCollections": [
-      "@angular-eslint/schematics"
-    ]
-  },
-  "schematics": {
-    "@angular-eslint/schematics:application": {
-      "setParserOptionsProject": true
-    },
-    "@angular-eslint/schematics:library": {
-      "setParserOptionsProject": true
-    }
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
