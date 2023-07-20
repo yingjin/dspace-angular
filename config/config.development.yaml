@@ -27,6 +27,17 @@ rest:
   # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
   nameSpace: /server
 
+# The REST API server settings
+# NOTE: these settings define which (publicly available) REST API to use. They are usually
+# 'synced' with the 'dspace.server.url' setting in your backend's local.cfg.
+  # PRODUCTION SETUP
+#rest:
+#  ssl: true
+#  host: dspacedev.rice.edu
+#  port: 443
+#  # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
+#  nameSpace: /server
+
 # Caching settings
 cache:
   # NOTE: how long should objects be cached for by default
