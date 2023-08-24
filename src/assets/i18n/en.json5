@@ -2336,6 +2336,12 @@
 
   "item.listelement.badge": "Item",
 
+  "item.page.advisor": "Advisor",
+
+  "item.page.type": "Type",
+
+  "item.page.publishedversion": "Published Version",
+
   "item.page.description": "Description",
 
   "item.page.journal-issn": "Journal ISSN",
@@ -2426,7 +2432,15 @@
 
   "item.page.subject": "Keywords",
 
-  "item.page.uri": "URI",
+  "item.page.uri": "Citable link to this page",
+
+  "item.page.rightsuri": "Link to license",
+
+  "item.page.rights": "Rights",
+
+  "item.page.degreename": "Degree",
+
+  "item.page.ispartof": "Forms part of",
 
   "item.page.bitstreams.view-more": "Show more",
 
@@ -3622,6 +3636,16 @@
 
   "search.filters.applied.f.author": "Author",
 
+  "search.filters.applied.f.advisor": "Advisor",
+
+  "search.filters.applied.f.degreedepartment": "Degree Department",
+
+  "search.filters.applied.f.degreediscipline": "Degree Discipline",
+
+  "search.filters.applied.f.degreelevel": "Degree Level",
+
+  "search.filters.applied.f.degreename": "Degree Name",
+
   "search.filters.applied.f.dateIssued.max": "End date",
 
   "search.filters.applied.f.dateIssued.min": "Start date",
@@ -3657,6 +3681,36 @@
   "search.filters.filter.author.placeholder": "Author name",
 
   "search.filters.filter.author.label": "Search author name",
+
+  "search.filters.filter.advisor.head": "Advisor",
+
+  "search.filters.filter.advisor.placeholder": "Advisor name",
+
+  "search.filters.filter.advisor.label": "Search advisor name",
+
+  "search.filters.filter.degreedepartment.head": "Degree Department",
+
+  "search.filters.filter.degreedepartment.placeholder": "Degree Department",
+
+  "search.filters.filter.degreedepartment.label": "Search degree department",
+
+  "search.filters.filter.degreediscipline.head": "Degree Discipline",
+
+  "search.filters.filter.degreediscipline.placeholder": "Degree Discipline",
+
+  "search.filters.filter.degreediscipline.label": "Search degree discipline",
+
+  "search.filters.filter.degreelevel.head": "Degree Level",
+
+  "search.filters.filter.degreelevel.placeholder": "Degree Level",
+
+  "search.filters.filter.degreelevel.label": "Search degree level",
+
+  "search.filters.filter.degreename.head": "Degree Name",
+
+  "search.filters.filter.degreename.placeholder": "Degree Name",
+
+  "search.filters.filter.degreename.label": "Search degree name",
 
   "search.filters.filter.birthDate.head": "Birth Date",
 

@@ -8,7 +8,7 @@ import { HeaderComponent } from './app/header/header.component';
 import { HeaderNavbarWrapperComponent } from './app/header-nav-wrapper/header-navbar-wrapper.component';
 import { RootModule } from '../../app/root.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
-import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
+// import { PublicationComponent } from './app/item-page/simple/item-types/publication/publication.component';
 import { ItemPageModule } from '../../app/item-page/item-page.module';
 import { FooterComponent } from './app/footer/footer.component';
 // import { JournalComponent } from './app/entity-groups/journal-entities/item-pages/journal/journal.component';
@@ -44,7 +44,7 @@ import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
-import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
+// import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
 // import { StartsWithDateComponent } from './app/shared/starts-with/date/starts-with-date.component';
 // import { StartsWithTextComponent } from './app/shared/starts-with/text/starts-with-text.component';
 // import {
@@ -64,12 +64,12 @@ const ENTRY_COMPONENTS = [
   // JournalComponent,
   // JournalIssueComponent,
   // JournalVolumeComponent,
-  PublicationComponent,
+  // PublicationComponent,
   UntypedItemComponent,
   // CommunityListElementComponent,
   // CollectionListElementComponent,
   // CollectionDropdownComponent,
-  FileDownloadLinkComponent,
+  // FileDownloadLinkComponent,
   // StartsWithDateComponent,
   // StartsWithTextComponent,
   // PublicationSidebarSearchListElementComponent,
