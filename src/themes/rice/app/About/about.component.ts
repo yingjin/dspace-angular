@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 // import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.component';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
   templateUrl: 'about.component.html'
   // templateUrl: '../../../../app/footer/footer.component.html'
 })
-export class AboutComponent {
 
+export class AboutComponent {
 
 }

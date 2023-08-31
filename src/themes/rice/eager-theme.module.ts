@@ -44,6 +44,7 @@ import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+import { AboutComponent } from './app/about/about.component';
 // import { FileDownloadLinkComponent } from './app/shared/file-download-link/file-download-link.component';
 // import { StartsWithDateComponent } from './app/shared/starts-with/date/starts-with-date.component';
 // import { StartsWithTextComponent } from './app/shared/starts-with/text/starts-with-text.component';
@@ -83,6 +84,7 @@ const DECLARATIONS = [
   HeaderComponent,
   HeaderNavbarWrapperComponent,
   NavbarComponent,
+  AboutComponent,
   // SearchNavbarComponent,
   FooterComponent,
   // CreateCollectionParentSelectorComponent,

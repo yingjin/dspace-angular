@@ -46,7 +46,9 @@ import { RootModule } from '../../app/root.module';
 // import { FileSectionComponent } from './app/item-page/simple/field-components/file-section/file-section.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
 // import { RootComponent } from './app/root/root.component';
-import { AboutComponent } from './app/about/about.component';
+// import { AboutComponent } from './app/about/about.component';
+// import { ItemPageCitationFieldComponent } from './app/item-page/simple/field-components/specific-field/citation/item-page-citation-field.component';
+// import { ItemPageIspartofFieldComponent } from './app/item-page/simple/field-components/specific-field/ispartof/item-page-ispartof-field-component';
 // import { BrowseBySwitcherComponent } from './app/browse-by/browse-by-switcher/browse-by-switcher.component';
 // import { CommunityListPageComponent } from './app/community-list-page/community-list-page.component';
 // import { SearchPageComponent } from './app/search-page/search-page.component';
@@ -162,7 +164,9 @@ const DECLARATIONS = [
   // FileSectionComponent,
   HomePageComponent,
   // RootComponent,
-  AboutComponent,
+  // AboutComponent,
+  // ItemPageCitationFieldComponent,
+  // ItemPageIspartofFieldComponent,
   // BrowseBySwitcherComponent,
   // CommunityListPageComponent,
   // SearchPageComponent,
