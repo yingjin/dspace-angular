@@ -32,6 +32,18 @@
                                             [metadataFields]="['dc.contributor.author', 'dc.creator']"
                                             [label]="'relationships.isAuthorOf' | translate">
     </ds-themed-metadata-representation-list>
+    <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
+                                            [parentItem]="object"
+                                            [itemType]="'Person'"
+                                            [metadataFields]="['dc.contributor.composer']"
+                                            [label]="'relationships.isAuthorOf' | translate">
+    </ds-themed-metadata-representation-list>
+    <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
+                                            [parentItem]="object"
+                                            [itemType]="'Person'"
+                                            [metadataFields]="['dc.contributor.performer']"
+                                            [label]="'relationships.isAuthorOf' | translate">
+    </ds-themed-metadata-representation-list>
     <ds-generic-item-page-field [item]="object"
                                 [fields]="['dc.contributor.advisor']"
                                 [label]="'item.page.advisor'">
