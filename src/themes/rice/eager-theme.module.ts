@@ -103,11 +103,9 @@ const DECLARATIONS = [
     ResultsBackButtonModule,
     RootModule,
     NavbarModule,
-    SharedBrowseByModule,
-    ResultsBackButtonModule,
     ItemPageModule,
     ItemSharedModule,
-    DsoPageModule,
+    DsoPageModule
   ],
   declarations: DECLARATIONS,
   providers: [

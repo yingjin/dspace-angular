@@ -65,7 +65,7 @@ import { HomePageComponent } from './app/home-page/home-page.component';
 // import { SiteStatisticsPageComponent } from './app/statistics-page/site-statistics-page/site-statistics-page.component';
 // import { CommunityPageComponent } from './app/community-page/community-page.component';
 // import { CollectionPageComponent } from './app/collection-page/collection-page.component';
-import { ItemPageComponent } from './app/item-page/simple/item-page.component';
+// import { ItemPageComponent } from './app/item-page/simple/item-page.component';
 // import { FullItemPageComponent } from './app/item-page/full/full-item-page.component';
 // import { LoginPageComponent } from './app/login-page/login-page.component';
 // import { LogoutPageComponent } from './app/logout-page/logout-page.component';
@@ -185,7 +185,7 @@ const DECLARATIONS = [
   // CommunityPageSubCommunityListComponent,
   // CommunityPageSubCollectionListComponent,
   // CollectionPageComponent,
-  ItemPageComponent,
+  // ItemPageComponent,
   // FullItemPageComponent,
   // LoginPageComponent,
   // LogoutPageComponent,
