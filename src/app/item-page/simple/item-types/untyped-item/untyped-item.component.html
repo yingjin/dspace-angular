@@ -32,7 +32,20 @@
       [metadataFields]="['dc.contributor.author', 'dc.creator']"
       [label]="'relationships.isAuthorOf' | translate">
     </ds-themed-metadata-representation-list>
-
+    <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
+                                            [parentItem]="object"
+                                            [itemType]="'Person'"
+                                            [metadataFields]="['dc.contributor.advisor']"
+                                            [label]="'item.page.advisor' | translate">
+    </ds-themed-metadata-representation-list>
+    <ds-generic-item-page-field [item]="object"
+                                [fields]="['thesis.degree.name']"
+                                [label]="'item.page.degreename'">
+    </ds-generic-item-page-field>
+    <ds-generic-item-page-field [item]="object"
+                                [fields]="['dc.type']"
+                                [label]="'item.page.type'">
+    </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['journal.title']"
       [label]="'item.page.journal-title'">
@@ -55,20 +68,6 @@
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.description']"
       [label]="'item.page.description'">
-    </ds-generic-item-page-field>
-    <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
-                                            [parentItem]="object"
-                                            [itemType]="'Person'"
-                                            [metadataFields]="['dc.contributor.advisor']"
-                                            [label]="'item.page.advisor' | translate">
-    </ds-themed-metadata-representation-list>
-    <ds-generic-item-page-field [item]="object"
-                                [fields]="['thesis.degree.name']"
-                                [label]="'item.page.degreename'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object"
-                                [fields]="['dc.type']"
-                                [label]="'item.page.type'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.subject']"
