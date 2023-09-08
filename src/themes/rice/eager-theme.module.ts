@@ -18,7 +18,7 @@ import { FooterComponent } from './app/footer/footer.component';
 // import {
 //   JournalVolumeComponent
 // } from './app/entity-groups/journal-entities/item-pages/journal-volume/journal-volume.component';
-import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
+// import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 // import {
 //     CreateCollectionParentSelectorComponent
@@ -66,7 +66,7 @@ const ENTRY_COMPONENTS = [
   // JournalIssueComponent,
   // JournalVolumeComponent,
   // PublicationComponent,
-  UntypedItemComponent,
+  // UntypedItemComponent,
   // CommunityListElementComponent,
   // CollectionListElementComponent,
   // CollectionDropdownComponent,
