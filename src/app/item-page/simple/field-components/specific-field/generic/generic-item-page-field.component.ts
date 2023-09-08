@@ -38,7 +38,7 @@ export class GenericItemPageFieldComponent extends ItemPageFieldComponent {
   /**
    * Whether the {@link MarkdownPipe} should be used to render this metadata.
    */
-  @Input() enableMarkdown = true;
+  @Input() enableMarkdown = false;
 
   /**
    * Whether any valid HTTP(S) URL should be rendered as a link
