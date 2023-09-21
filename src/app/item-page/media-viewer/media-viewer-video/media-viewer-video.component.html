@@ -8,6 +8,7 @@
   "
   preload="none"
   controls
+  controlsList="nodownload"
 >
   <ng-container *ngIf="getMediaCap(medias[currentIndex].bitstream.name, captions) as capInfos">
     <ng-container *ngFor="let capInfo of capInfos">
