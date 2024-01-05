@@ -21,6 +21,9 @@ import {
 import {
   ItemPageIspartofFieldComponent
 } from './simple/field-components/specific-field/ispartof/item-page-ispartof-field-component';
+import {
+  ItemPageHaspartFieldComponent
+} from './simple/field-components/specific-field/haspart/item-page-haspart-field-component';
 
 import { ItemPageUriFieldComponent } from './simple/field-components/specific-field/uri/item-page-uri-field.component';
 import { ItemPageFieldComponent } from './simple/field-components/specific-field/item-page-field.component';
@@ -87,6 +90,7 @@ const DECLARATIONS = [
   ItemPageAbstractFieldComponent,
   ItemPageCitationFieldComponent,
   ItemPageIspartofFieldComponent,
+  ItemPageHaspartFieldComponent,
   ItemPageUriFieldComponent,
   ItemPageFieldComponent,
   CollectionsComponent,
