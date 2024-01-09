@@ -2442,6 +2442,8 @@
 
   "item.page.ispartof": "Forms part of",
 
+  "item.page.haspart": "Has part(s)",
+
   "item.page.bitstreams.view-more": "Show more",
 
   "item.page.bitstreams.collapse": "Collapse",
