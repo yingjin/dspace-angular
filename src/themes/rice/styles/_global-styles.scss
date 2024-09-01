@@ -1,0 +1,42 @@
+// Add any global css for the theme here
+
+// imports the base global style
+@import '../../../styles/_global-styles.scss';
+
+a{
+  color: var(--ds-breadcrumb-link-color);
+}
+.btn-link{
+  color: var(--ds-breadcrumb-link-color);
+}
+a:hover {
+  color: var(--ds-breadcrumb-link-hover-color);
+}
+
+a.lead {
+  color: var(--ds-breadcrumb-link-color);
+}
+a.lead:hover {
+  color: var(--ds-breadcrumb-link-hover-color);
+}
+.lead{
+  font-weight: 400;
+}
+.facet-filter, .setting-option {
+  background-color: var(--bs-light);
+  border-radius: var(--bs-border-radius);
+
+  &.p-3 {
+    // Needs !important because the original bootstrap class uses it
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .badge-secondary {
+    background-color: var(--bs-primary);
+  }
+
+  h5 {
+    font-size: 1.1rem
+  }
+}
