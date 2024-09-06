@@ -17,6 +17,9 @@ import { ThemedMediaViewerComponent } from '../../../../../../../app/item-page/m
 import { MiradorViewerComponent } from '../../../../../../../app/item-page/mirador-viewer/mirador-viewer.component';
 import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
 import { ItemPageAbstractFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
+import { ItemPageCitationFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/citation/item-page-citation-field.component';
+import { ItemPageHaspartFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/haspart/item-page-haspart-field-component';
+import { ItemPageIspartofFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/ispartof/item-page-ispartof-field-component';
 import { ItemPageCcLicenseFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/cc-license/item-page-cc-license-field.component';
 import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
 import { GenericItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
@@ -59,6 +62,9 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
     ThemedMetadataRepresentationListComponent,
     GenericItemPageFieldComponent,
     ItemPageAbstractFieldComponent,
+    ItemPageCitationFieldComponent,
+    ItemPageHaspartFieldComponent,
+    ItemPageIspartofFieldComponent,
     ItemPageUriFieldComponent,
     CollectionsComponent,
     RouterLink,

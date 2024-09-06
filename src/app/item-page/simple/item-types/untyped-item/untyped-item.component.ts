@@ -21,6 +21,9 @@ import { ThemedMediaViewerComponent } from '../../../media-viewer/themed-media-v
 import { MiradorViewerComponent } from '../../../mirador-viewer/mirador-viewer.component';
 import { ThemedFileSectionComponent } from '../../field-components/file-section/themed-file-section.component';
 import { ItemPageAbstractFieldComponent } from '../../field-components/specific-field/abstract/item-page-abstract-field.component';
+import { ItemPageCitationFieldComponent } from '../../field-components/specific-field/citation/item-page-citation-field.component';
+import { ItemPageHaspartFieldComponent } from '../../field-components/specific-field/haspart/item-page-haspart-field-component';
+import { ItemPageIspartofFieldComponent } from '../../field-components/specific-field/ispartof/item-page-ispartof-field-component';
 import { ItemPageCcLicenseFieldComponent } from '../../field-components/specific-field/cc-license/item-page-cc-license-field.component';
 import { ItemPageDateFieldComponent } from '../../field-components/specific-field/date/item-page-date-field.component';
 import { GenericItemPageFieldComponent } from '../../field-components/specific-field/generic/generic-item-page-field.component';
@@ -28,6 +31,7 @@ import { ThemedItemPageTitleFieldComponent } from '../../field-components/specif
 import { ItemPageUriFieldComponent } from '../../field-components/specific-field/uri/item-page-uri-field.component';
 import { ThemedMetadataRepresentationListComponent } from '../../metadata-representation-list/themed-metadata-representation-list.component';
 import { ItemComponent } from '../shared/item.component';
+import { ThemedAccessStatusBadgeComponent } from '../../../../shared/object-collection/shared/badges/access-status-badge/themed-access-status-badge.component';
 
 /**
  * Component that represents a publication Item page
@@ -54,12 +58,16 @@ import { ItemComponent } from '../shared/item.component';
     ThemedMetadataRepresentationListComponent,
     GenericItemPageFieldComponent,
     ItemPageAbstractFieldComponent,
+    ItemPageCitationFieldComponent,
+    ItemPageHaspartFieldComponent,
+    ItemPageIspartofFieldComponent,
     ItemPageUriFieldComponent,
     CollectionsComponent,
     RouterLink,
     AsyncPipe,
     TranslateModule,
     ItemPageCcLicenseFieldComponent,
+    ThemedAccessStatusBadgeComponent,
   ],
 })
 export class UntypedItemComponent extends ItemComponent {}
