@@ -3,26 +3,7 @@
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
 
-a{
-  color: var(--ds-breadcrumb-link-color);
-}
-.btn-link{
-  color: var(--ds-breadcrumb-link-color);
-}
-a:hover {
-  color: var(--ds-breadcrumb-link-hover-color);
-}
-
-a.lead {
-  color: var(--ds-breadcrumb-link-color);
-}
-a.lead:hover {
-  color: var(--ds-breadcrumb-link-hover-color);
-}
-.lead{
-  font-weight: 400;
-}
-.facet-filter, .setting-option {
+.facet-filter, .setting-option, .advanced-search {
   background-color: var(--bs-light);
   border-radius: var(--bs-border-radius);
 
@@ -36,7 +17,7 @@ a.lead:hover {
     background-color: var(--bs-primary);
   }
 
-  h5 {
+  h4, .h4 {
     font-size: 1.1rem
   }
 }

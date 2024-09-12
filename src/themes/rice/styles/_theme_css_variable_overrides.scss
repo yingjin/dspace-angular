@@ -1,9 +1,29 @@
 // Override or add CSS variables for your theme here
 
 :root {
-  --ds-header-logo-height: 90px;
+    
+  @include media-breakpoint-up(md) {
+    --ds-header-logo-height: 90px;
+    --ds-header-height: 120px;
+  }
+  @include media-breakpoint-down(sm) {
+    --ds-header-logo-height: 50px;
+    --ds-header-height: 90px;
+  }
+
   --ds-banner-text-background: rgba(0, 0, 0, 0.45);
   --ds-banner-background-gradient-width: 300px;
+
+  --ds-header-navbar-border-bottom-height: 0px;
+
+  /* set the next two properties as `--ds-header-navbar-border-bottom-*`
+  in order to keep the bottom border of the header when navbar is expanded */
+  --ds-expandable-navbar-border-top-color: #{$white};
+  --ds-expandable-navbar-border-top-height: 0;
+  --ds-expandable-navbar-padding-top: 0;
+
+  --ds-item-page-img-field-default-inline-height: 24px;
+  --ds-item-page-img-field-ror-inline-height: var(--ds-item-page-img-field-default-inline-height);
 
   --ds-breadcrumb-link-color: #{$rice-navy};
   --ds-breadcrumb-link-hover-color: #{darken($rice-navy, 15%)};
@@ -14,5 +34,5 @@
   //--ds-home-news-link-color: #{$rice-navy};
   --ds-home-news-link-color: #{$rice-navy};
   --ds-home-news-link-hover-color: #{darken($rice-navy, 15%)};
-  --ds-header-navbar-border-bottom-color: #{$green};
+  --ds-header-navbar-border-bottom-color: #495057;
 }
