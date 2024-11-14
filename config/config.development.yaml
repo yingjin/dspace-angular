@@ -389,15 +389,18 @@ markdown:
   enabled: true
   mathjax: true
 
-# Which vocabularies should be used for which search filters
-# and whether to show the filter in the search sidebar
-# Take a look at the filter-vocabulary-config.ts file for documentation on how the options are obtained
 vocabularies:
   - filter: 'subject'
     vocabulary: 'srsc'
-    enabled: true
+    enabled: fasle
 
 # Default collection/community sorting order at Advanced search, Create/update community and collection when there are not a query.
 comcolSelectionSort:
   sortField: 'dc.title'
   sortDirection: 'ASC'
+
+# Settings to enable/disable or configure Advanced Search filters.
+advancedFilters:
+  enabled: true
+  # List of filters to enable in "Advanced Search" dropdown
+  filter: [ 'title', 'author', 'subject', 'entityType' ]
