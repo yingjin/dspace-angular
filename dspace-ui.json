@@ -4,12 +4,16 @@
       "name": "dspace-ui",
       "cwd": "/ds/sw/ui-dspace",
       "script": "dist/server/main.js",
-      "instances": "max",
+      "instances": 0,
       "exec_mode": "cluster",
-//      "node-args": "--max_old_space_size=8192",
+      "cron_restart": "0 0 * * *",
+      "max_memory_restart": "7g",
+      "node-args": [
+        "--max_old_space_size=8g"
+      ],
       "env": {
         "NODE_ENV": "production",
-        "NODE_OPTIONS": "--max-old-space-size=4096",
+        //        "NODE_OPTIONS": "--max-old-space-size=4096",
         "DSPACE_REST_SSL": "true",
         "DSPACE_REST_HOST": "repository.rice.edu",
         "DSPACE_REST_PORT": "443",
