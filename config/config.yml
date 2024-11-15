@@ -17,6 +17,13 @@ ui:
   # Trust X-FORWARDED-* headers from proxies (default = true)
   useProxies: true
 
+universal:
+  # Whether to inline "critical" styles into the server-side rendered HTML.
+  # Determining which styles are critical is a relatively expensive operation;
+  # this option can be disabled to boost server performance at the expense of
+  # loading smoothness.
+  inlineCriticalCss: false
+
 # The REST API server settings
 # NOTE: these settings define which (publicly available) REST API to use. They are usually
 # 'synced' with the 'dspace.server.url' setting in your backend's local.cfg.
@@ -147,18 +154,40 @@ submission:
       confidence:
         # NOTE: example of configuration
         #   # NOTE: confidence value
-        # - name: dc.author
-        #   # NOTE: fontawesome (v5.x) icon classes and bootstrap utility classes can be used
-        #   style: fa-user
+        # - value: 600
+        #   # NOTE: fontawesome (v6.x) icon classes and bootstrap utility classes can be used
+        #   style: text-success
+        #   icon: fa-circle-check
+        #   # NOTE: the class configured in property style is used by default, the icon property could be used in component
+        #           configured to use a 'icon mode' display (mainly in edit-item page)
         - value: 600
           style: text-success
+          icon: fa-circle-check
         - value: 500
           style: text-info
+          icon: fa-gear
         - value: 400
           style: text-warning
+          icon: fa-circle-question
+        - value: 300
+          style: text-muted
+          icon: fa-thumbs-down
+        - value: 200
+          style: text-muted
+          icon: fa-circle-exclamation
+        - value: 100
+          style: text-muted
+          icon: fa-circle-stop
+        - value: 0
+          style: text-muted
+          icon: fa-ban
+        - value: -1
+          style: text-muted
+          icon: fa-circle-xmark
         # default configuration
         - value: default
           style: text-muted
+          icon: fa-circle-xmark
 
 #  Default Language in which the UI will be rendered if the user's browser language is not an active language
 defaultLanguage: en
@@ -169,6 +198,12 @@ languages:
   - code: en
     label: English
     active: true
+  - code: ar
+    label: العربية
+    active: true
+  - code: bn
+    label: বাংলা
+    active: true
   - code: ca
     label: Català
     active: true
@@ -178,8 +213,14 @@ languages:
   - code: de
     label: Deutsch
     active: true
+  - code: el
+    label: Ελληνικά
+    active: true
   - code: es
     label: Español
+    active: true
+  - code: fi
+    label: Suomi
     active: true
   - code: fr
     label: Français
@@ -187,14 +228,20 @@ languages:
   - code: gd
     label: Gàidhlig
     active: true
-  - code: it
-    label: Italiano
-    active: true
-  - code: lv
-    label: Latviešu
+  - code: hi
+    label: हिंदी
     active: true
   - code: hu
     label: Magyar
+    active: true
+  - code: it
+    label: Italiano
+    active: true
+  - code: kk
+    label: Қазақ
+    active: true
+  - code: lv
+    label: Latviešu
     active: true
   - code: nl
     label: Nederlands
@@ -208,8 +255,11 @@ languages:
   - code: pt-BR
     label: Português do Brasil
     active: true
-  - code: fi
-    label: Suomi
+  - code: sr-lat
+    label: Srpski (lat)
+    active: true
+  - code: sr-cyr
+    label: Српски
     active: true
   - code: sv
     label: Svenska
@@ -217,23 +267,11 @@ languages:
   - code: tr
     label: Türkçe
     active: true
-  - code: vi
-    label: Tiếng Việt
-    active: true
-  - code: kk
-    label: Қазақ
-    active: true
-  - code: bn
-    label: বাংলা
-    active: true
-  - code: hi
-    label: हिंदी
-    active: true
-  - code: el
-    label: Ελληνικά
-    active: true
   - code: uk
     label: Yкраї́нська
+    active: true
+  - code: vi
+    label: Tiếng Việt
     active: true
 
 
@@ -266,6 +304,8 @@ homePage:
     # No. of communities to list per page on the home page
     # This will always round to the nearest number from the list of page sizes. e.g. if you set it to 7 it'll use 10
     pageSize: 5
+  # Enable or disable the Discover filters on the homepage
+  showDiscoverFilters: false
 
 # Item Config
 item:
@@ -279,8 +319,17 @@ item:
     # settings menu.  See pageSizeOptions in 'pagination-component-options.model.ts'.
     pageSize: 5
 
+# Community Page Config
+community:
+  # Search tab config
+  searchSection:
+    showSidebar: true
+
 # Collection Page Config
 collection:
+  # Search tab config
+  searchSection:
+    showSidebar: true
   edit:
     undoTimeout: 10000 # 10 seconds
 
@@ -292,58 +341,58 @@ themes:
   #
   # # A theme with a handle property will match the community, collection or item with the given
   # # handle, and all collections and/or items within it
-  # - name: 'custom',
-  #   handle: '10673/1233'
+  # - name: custom
+  #   handle: 10673/1233
   #
   # # A theme with a regex property will match the route using a regular expression. If it
   # # matches the route for a community or collection it will also apply to all collections
   # # and/or items within it
-  # - name: 'custom',
-  #   regex: 'collections\/e8043bc2.*'
+  # - name: custom
+  #   regex: collections\/e8043bc2.*
   #
   # # A theme with a uuid property will match the community, collection or item with the given
   # # ID, and all collections and/or items within it
-  # - name: 'custom',
-  #   uuid: '0958c910-2037-42a9-81c7-dca80e3892b4'
+  # - name: custom
+  #   uuid: 0958c910-2037-42a9-81c7-dca80e3892b4
   #
   # # The extends property specifies an ancestor theme (by name). Whenever a themed component is not found
   # # in the current theme, its ancestor theme(s) will be checked recursively before falling back to default.
-  # - name: 'custom-A',
-  #   extends: 'custom-B',
+  # - name: custom-A
+  #   extends: custom-B
   #   # Any of the matching properties above can be used
-  #   handle: '10673/34'
+  #   handle: 10673/34
   #
-  # - name: 'custom-B',
-  #   extends: 'custom',
-  #   handle: '10673/12'
+  # - name: custom-B
+  #   extends: custom
+  #   handle: 10673/12
   #
   # # A theme with only a name will match every route
-  # name: 'custom'
+  # name: custom
   #
   # # This theme will use the default bootstrap styling for DSpace components
   # - name: BASE_THEME_NAME
   #
-#  - name: dspace
-#    headTags:
-#      - tagName: link
-#        attributes:
-#          rel: icon
-#          href: assets/dspace/images/favicons/favicon.ico
-#          sizes: any
-#      - tagName: link
-#        attributes:
-#          rel: icon
-#          href: assets/dspace/images/favicons/favicon.svg
-#          type: image/svg+xml
-#      - tagName: link
-#        attributes:
-#          rel: apple-touch-icon
-#          href: assets/dspace/images/favicons/apple-touch-icon.png
-#      - tagName: link
-#        attributes:
-#          rel: manifest
-#          href: assets/dspace/images/favicons/manifest.webmanifest
-#
+  #  - name: dspace
+  #    headTags:
+  #      - tagName: link
+  #        attributes:
+  #          rel: icon
+  #          href: assets/dspace/images/favicons/favicon.ico
+  #          sizes: any
+  #      - tagName: link
+  #        attributes:
+  #          rel: icon
+  #          href: assets/dspace/images/favicons/favicon.svg
+  #          type: image/svg+xml
+  #      - tagName: link
+  #        attributes:
+  #          rel: apple-touch-icon
+  #          href: assets/dspace/images/favicons/apple-touch-icon.png
+  #      - tagName: link
+  #        attributes:
+  #          rel: manifest
+  #          href: assets/dspace/images/favicons/manifest.webmanifest
+  #
   - name: rice
     headTags:
       - tagName: link
@@ -367,7 +416,7 @@ themes:
 
 # The default bundles that should always be displayed as suggestions when you upload a new bundle
 bundle:
-  standardBundles: [ ORIGINAL, THUMBNAIL, LICENSE ]
+  standardBundles: [ ORIGINAL, THUMBNAIL, LICENSE, PERMIT ]
 
 # Whether to enable media viewer for image and/or video Bitstreams (i.e. Bitstreams whose MIME type starts with 'image' or 'video').
 # For images, this enables a gallery viewer where you can zoom or page through images.
@@ -382,6 +431,7 @@ mediaViewer:
 info:
   enableEndUserAgreement: true
   enablePrivacyStatement: true
+  enableCOARNotifySupport: false
 
 # Whether to enable Markdown (https://commonmark.org/) and MathJax (https://www.mathjax.org/)
 # display in supported metadata fields. By default, only dc.description.abstract is supported.
@@ -389,9 +439,6 @@ markdown:
   enabled: true
   mathjax: true
 
-# Which vocabularies should be used for which search filters
-# and whether to show the filter in the search sidebar
-# Take a look at the filter-vocabulary-config.ts file for documentation on how the options are obtained
 vocabularies:
   - filter: 'subject'
     vocabulary: 'srsc'
@@ -402,8 +449,63 @@ comcolSelectionSort:
   sortField: 'dc.title'
   sortDirection: 'ASC'
 
-# Settings to enable/disable or configure Advanced Search filters.
-advancedFilters:
-  enabled: true
-  # List of filters to enable in "Advanced Search" dropdown
-  filter: [ 'title', 'author', 'subject', 'entityType' ]
+# Search settings
+search:
+  # Settings to enable/disable or configure advanced search filters.
+  advancedFilters:
+    enabled: true
+    # List of filters to enable in "Advanced Search" dropdown
+    filter: [ 'title', 'author', 'subject', 'entityType' ]
+
+
+# Notify metrics
+# Configuration for Notify Admin Dashboard for metrics visualization
+notifyMetrics:
+  # Configuration for received messages
+  - title: 'admin-notify-dashboard.received-ldn'
+    boxes:
+      - color: '#B8DAFF'
+        title: 'admin-notify-dashboard.NOTIFY.incoming.accepted'
+        config: 'NOTIFY.incoming.accepted'
+        description: 'admin-notify-dashboard.NOTIFY.incoming.accepted.description'
+      - color: '#D4EDDA'
+        title: 'admin-notify-dashboard.NOTIFY.incoming.processed'
+        config: 'NOTIFY.incoming.processed'
+        description: 'admin-notify-dashboard.NOTIFY.incoming.processed.description'
+      - color: '#FDBBC7'
+        title: 'admin-notify-dashboard.NOTIFY.incoming.failure'
+        config: 'NOTIFY.incoming.failure'
+        description: 'admin-notify-dashboard.NOTIFY.incoming.failure.description'
+      - color: '#FDBBC7'
+        title: 'admin-notify-dashboard.NOTIFY.incoming.untrusted'
+        config: 'NOTIFY.incoming.untrusted'
+        description: 'admin-notify-dashboard.NOTIFY.incoming.untrusted.description'
+      - color: '#43515F'
+        title: 'admin-notify-dashboard.NOTIFY.incoming.involvedItems'
+        textColor: '#fff'
+        config: 'NOTIFY.incoming.involvedItems'
+        description: 'admin-notify-dashboard.NOTIFY.incoming.involvedItems.description'
+  # Configuration for outgoing messages
+  - title: 'admin-notify-dashboard.generated-ldn'
+    boxes:
+      - color: '#B8DAFF'
+        title: 'admin-notify-dashboard.NOTIFY.outgoing.queued'
+        config: 'NOTIFY.outgoing.queued'
+        description: 'admin-notify-dashboard.NOTIFY.outgoing.queued.description'
+      - color: '#FDEEBB'
+        title: 'admin-notify-dashboard.NOTIFY.outgoing.queued_for_retry'
+        config: 'NOTIFY.outgoing.queued_for_retry'
+        description: 'admin-notify-dashboard.NOTIFY.outgoing.queued_for_retry.description'
+      - color: '#FDBBC7'
+        title: 'admin-notify-dashboard.NOTIFY.outgoing.failure'
+        config: 'NOTIFY.outgoing.failure'
+        description: 'admin-notify-dashboard.NOTIFY.outgoing.failure.description'
+      - color: '#43515F'
+        title: 'admin-notify-dashboard.NOTIFY.outgoing.involvedItems'
+        textColor: '#fff'
+        config: 'NOTIFY.outgoing.involvedItems'
+        description: 'admin-notify-dashboard.NOTIFY.outgoing.involvedItems.description'
+      - color: '#D4EDDA'
+        title: 'admin-notify-dashboard.NOTIFY.outgoing.delivered'
+        config: 'NOTIFY.outgoing.delivered'
+        description: 'admin-notify-dashboard.NOTIFY.outgoing.delivered.description'
