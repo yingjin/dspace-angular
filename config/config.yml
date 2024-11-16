@@ -442,7 +442,7 @@ markdown:
 vocabularies:
   - filter: 'subject'
     vocabulary: 'srsc'
-    enabled: fasle
+    enabled: false
 
 # Default collection/community sorting order at Advanced search, Create/update community and collection when there are not a query.
 comcolSelectionSort:
@@ -455,7 +455,8 @@ search:
   advancedFilters:
     enabled: true
     # List of filters to enable in "Advanced Search" dropdown
-    filter: [ 'title', 'author', 'subject', 'entityType' ]
+    filter: [ 'title', 'author', 'subject' ]
+    #filter: [ 'title', 'author', 'subject', 'entityType' ]
 
 
 # Notify metrics
