@@ -398,7 +398,7 @@ themes:
       - tagName: link
         attributes:
           rel: icon
-          href: assets/rice/images/favicons/Rice-R.ico
+          href: assets/rice/images/favicons/R-3.ico
           sizes: any
 #      - tagName: link
 #        attributes:
