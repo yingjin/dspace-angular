@@ -5,6 +5,7 @@
      aria-haspopup="menu"
      [title]="'nav.language' | translate"
      (click)="$event.preventDefault()" data-toggle="dropdown" ngbDropdownToggle
+     data-test="lang-switch"
      tabindex="0">
 <!--    YJ Non-customizable-->
     <i class="fas fa-globe-asia fa-lg fa-fw"></i><span style="font-size: xx-small"> {{currentLangLabel()}} </span>
